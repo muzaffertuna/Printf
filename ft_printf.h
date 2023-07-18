@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtoktas <mtoktas@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 16:18:00 by mtoktas           #+#    #+#             */
-/*   Updated: 2023/07/17 20:27:32 by mtoktas          ###   ########.fr       */
+/*   Updated: 2023/07/18 13:45:02 by mtoktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <unistd.h>
 # include <stdarg.h>
-# include <stdio.h>
 
 int	ft_putstr(char *str);
 int	ft_putchar(char c);
@@ -23,5 +22,6 @@ int	ft_putnbr(int nb);
 int	ft_u(unsigned int u);
 int	ft_p(unsigned long p);
 int	ft_x(unsigned int x, char b);
-
+int	ft_check(char c, va_list arg);
+int	ft_printf(const char *s, ...);
 #endif

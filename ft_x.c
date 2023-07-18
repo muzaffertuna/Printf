@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   x.c                                                :+:      :+:    :+:   */
+/*   ft_x.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtoktas <mtoktas@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 16:39:26 by mtoktas           #+#    #+#             */
-/*   Updated: 2023/07/17 21:22:06 by mtoktas          ###   ########.fr       */
+/*   Updated: 2023/07/18 13:44:55 by mtoktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_u(unsigned int u)
 {
@@ -29,7 +29,7 @@ int	ft_u(unsigned int u)
 
 int	ft_p(unsigned long p)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (p >= 16)
@@ -38,12 +38,12 @@ int	ft_p(unsigned long p)
 		i += ft_putchar((p % 16) + '0');
 	else
 		i += ft_putchar((p % 16) + 87);
-	return(i);
+	return (i);
 }
 
 int	ft_x(unsigned int x, char b)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (x >= 16)
@@ -51,9 +51,11 @@ int	ft_x(unsigned int x, char b)
 	if ((x % 16) < 10)
 		i += ft_putchar((x % 16) + '0');
 	else
-		if(b == 'x')
+	{
+		if (b == 'x')
 			i += ft_putchar((x % 16) + 87);
 		else
 			i += ft_putchar((x % 16) + 55);
-	return(i);
+	}
+	return (i);
 }
